@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-border: #21b6a8;
+    --color-negro: #000;
+  }
+  .form-login {
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #ccc;
+    border: 1px solid var(--color-border);
+  }
+  .form-login input[type="text"],
+  .form-login select,
+  .form-login input[type="file"],
+  .form-login input[type="password"],
+  .form-login textarea {
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: inline-block;
+  }
+  .form-login input[type="text"],
+  .form-login select,
+  .form-login input[type="password"],
+  .form-login textarea {
+    border: 1px solid var(--color-border);
+  }
+  .form-login input[type="file"] {
+    color: transparent;
+  }
+  .form-login input[type="text"],
+  .form-login input[type="number"],
+  .form-login input[type="password"],
+  .form-login select,
+  .form-login textarea {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+  
