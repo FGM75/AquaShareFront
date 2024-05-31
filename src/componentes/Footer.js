@@ -24,7 +24,7 @@ export const Footer = () => {
           <div className="col copyright">
             <p className="text-center">
               <small className="text-black-50">
-                © 2021. Todos los derechos reservados.
+                © 2024. Todos los derechos reservados.
               </small>
             </p>
           </div>
