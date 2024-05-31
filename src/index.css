@@ -1,13 +1,221 @@
-body {
+:root {
+  --color-azulado: #518edd62;
+  --color-principal: #21b6a8;
+  --altura-cabecera-pie-xs: 60px;
+  --altura-cabecera-pie-md: 75px;
+  --color-blanco: #fff;
+  --color-negro: #000;
+  --color-fondo: #dcfafc;
+}
+ul,
+li,
+label {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+textarea {
+  resize: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.actual {
+  font-weight: bold;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.color-link-page {
+  color: var(--color-principal);
+}
+.color-link-page:hover {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+.color-page {
+  color: var(--color-principal);
+}
+.cabecera {
+  box-shadow: 0px 4px 15px 2px rgb(0 0 0 / 4%);
+  border-bottom: 1px solid var(--color-principal);
+  z-index: 2;
+}
+.btn-nav {
+  color: var(--color-principal);
+  background-color: transparent;
+  background-image: none;
+  border-color: var(--color-principal);
+}
+.btn-nav:hover,
+.btn-submit {
+  color: var(--color-blanco);
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+}
+.btn-submit {
+  margin-top: 32px;
+}
+.boton {
+  border: 3px solid var(--color-azulado);
+  color: var(--color-azulado);
+  height: 50px;
+  font-size: 30px;
+  font-weight: 300;
+  background-color: var(--color-blanco);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.botonbuscar {
+  width: 110px;
+  height: 60px;
+  color: var(--color-negro);
+  font-size: 25px;
 }
+.list-inline-item:not(:last-child) {
+  margin-right: 1rem;
+}
+.boton:hover {
+  background-color: var(--color-azulado);
+}
+.iconoFooter {
+  display: inline-block;
+  font-size: 40px;
+}
+.item-list {
+  font-size: 18px;
+  margin-left: 25px;
+}
+.btn-hamburguer {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.navbar-items {
+  display: none;
+  position: absolute;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  top: 95%;
+  right: 0;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-principal);
+  border-top: 0;
+  border-right: 0;
+}
+.navbar-items.show {
+  display: block;
+}
+.nav-line-btn {
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  left: 0;
+  background: var(--color-principal);
+  transition: all 0.25s ease;
+  transform-origin: 0px 100%;
+}
+.nav-line-btn:nth-child(1) {
+  top: 10%;
+}
+.nav-line-btn:nth-child(2) {
+  top: 50%;
+}
+.nav-line-btn:nth-child(3) {
+  bottom: 10%;
+}
+.mapa .leaflet-container {
+  min-height: calc(100vh - var(--altura-cabecera-pie-xs) * 2);
+  z-index: 0;
+}
+.row-notfound {
+  height: 80vh;
+}
+.box {
+  border-top: 1px solid var(--color-principal);
+}
+.titulo {
+  font-family: monospace;
+}
+.titulo-about {
+  font-size: 43px;
+}
+.btn-crearPunto {
+  border-radius: 50%;
+  background: var(--color-principal);
+  height: 40px;
+  width: 40px;
+  z-index: 23;
+  justify-content: center;
+  align-items: center;
+  bottom: 40px;
+  right: 10px;
+  display: flex;
+  position: absolute;
+}
+.btn-crearPunto svg {
+  color: #fff;
+}
+.fundador {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  line-height: 214px;
+}
+.fundador img {
+  width: 100%;
+}
+.both {
+  background-color: var(--color-blanco);
+}
+.icon-info-user {
+  width: 80px;
+  height: 80px;
+}
+.contenedor {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.imagenlugar {
+  margin-top: 4px;
+}
+.datos {
+  margin: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--color-fondo);
+}
+.datos > .puntuacion {
+  padding-bottom: 5px;
+}
+.datos > .provinciasitio {
+  padding-bottom: 5px;
+}
+.datos > .descripcionsitio {
+  padding-bottom: 5px;
+}
+.datos > .coordenadassitio {
+  padding-bottom: 5px;
+}
+.datos > .tipositio {
+  padding-bottom: 5px;
+}
+.imagen-popup-punto {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 10px;
+}
+.info-punto {
+  background: var(--color-principal);
+  border-radius: 10px;
+}
+@media (min-width: 540px) {
+  .mapa .leaflet-container {
+    min-height: calc(100vh - var(--altura-cabecera-pie-md) * 2);
+  }
+} ;

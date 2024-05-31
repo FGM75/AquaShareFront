@@ -11,7 +11,7 @@ export const ListadoNavegador = (props) => {
         showNavItems={showNavItems}
       />
       <LinkNavegacion
-        texto="Sobre el proyecto"
+        texto="Sobre Nosotros"
         redireccion="/about"
         clase="text-dark"
         mobile={mobile}

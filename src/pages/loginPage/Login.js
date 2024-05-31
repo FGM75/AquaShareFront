@@ -3,16 +3,47 @@ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../../contextos/AuthContext";
 import { NavLink } from "react-router-dom";
 export const Login = () => {
+  const history = useHistory();
+  const { loguearUsuario } = useContext(AuthContext);
+  const [datosLogin, setDatosLogin] = useState({
+    usuario: "",
+    contrasenya: "",
+  });
+  const [error, setError] = useState(false);
+  const setDatos = (e) => {
+    setDatosLogin({
+      ...datosLogin,
+      [e.target.id]: e.target.value,
+    });
+  };
 
   //REACT_APP_URL_API AÑADIR .ENV
-  
+  const enviarFormulario = async (e) => {
+    e.preventDefault();
+    const resp = await fetch(process.env.REACT_APP_URL_API + "usuarios/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosLogin),
+    });
+    if (!resp.ok) {
+      setError(true);
+      return;
+    }
+    setError(false);
+    const { token } = await resp.json();
+    localStorage.setItem("token", token);
+    loguearUsuario();
+    history.push("/inicio");
+  };
   return (
     <div className="container">
       <div className="row">
         <div className="col-12 d-flex justify-content-center py-5">
           <img
             className="imagen"
-            src="AquaShare.png"
+            src="aquaTravel.png"
             id="icon"
             alt="User Icon"
             width="80"

@@ -16,7 +16,7 @@ export const Cabecera = () => {
             <div className="col-2 col-sm-1">
               <NavLink to="/inicio" activeClassName="actual">
                 <img
-                  src="https://firebasestorage.googleapis.com/v0/b/aquashare-94e77.appspot.com/o/PNG%20Logo.png?alt=media&token=f4915287-ba05-4f07-a597-1f125727bfff"
+                  src="https://firebasestorage.googleapis.com/v0/b/aquatravel-f70b5.appspot.com/o/aquaTravel.png?alt=media"
                   alt="Logo de la página"
                   className="rounded-circle"
                   width="65px"

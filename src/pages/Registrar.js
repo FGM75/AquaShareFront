@@ -3,6 +3,42 @@ import { NavLink, useHistory } from "react-router-dom";
 import { AuthContext } from "../contextos/AuthContext";
 
 export const Registrar = () => {
+  const history = useHistory();
+  const { usuarioRegistrado } = useContext(AuthContext);
+  const [datosRegistro, setDatosRegistro] = useState({
+    usuario: "",
+    contrasenya: "",
+    email: "",
+  });
+  const [error, setError] = useState(false);
+  const setDatos = (e) => {
+    setDatosRegistro({
+      ...datosRegistro,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  //REACT_APP_URL_API AÑADIR .ENV
+  const enviarFormulario = async (e) => {
+    e.preventDefault();
+    const resp = await fetch(
+      process.env.REACT_APP_URL_API + "usuarios/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datosRegistro),
+      }
+    );
+    if (!resp.ok) {
+      setError(true);
+      return;
+    }
+    setError(false);
+    usuarioRegistrado();
+    history.push("/verify");
+  };
   return (
     <div className="container">
       <div className="row">
