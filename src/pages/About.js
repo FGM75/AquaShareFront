@@ -19,12 +19,12 @@ export const About = () => {
         </div>
         <div className="col-12 col-md-8 mt-sm-2">
           <p>
-            AquaShare fundada en 2024, como proyecto final de DAM, ha pasado
+            AquaTravel fundada en 2024, como proyecto final de DAM, ha pasado
             de ser una idea pequeña a una página que cumplirá con la misión de
             descubrir el mundo de forma más fácil para todos.
           </p>
           <p>
-            AquaShare apuesta por la tecnologia para viajar a lugares por
+            AquaTravel apuesta por la tecnologia para viajar a lugares por
             descubrir. Conectando a millores de viajeros con experiencias
             únicas, y diversas opiniones para crear una comunidad de
             exploradores.

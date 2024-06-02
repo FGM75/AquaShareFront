@@ -19,6 +19,7 @@ export const Inicial = () => {
       return;
     }
     const listadoPuntosAPI = await resp.json();
+    console.log(listadoPuntosAPI);
     setListadoPuntos(listadoPuntosAPI);
   };
   const createIcon = (url) => {
@@ -38,7 +39,7 @@ export const Inicial = () => {
       <div className="mapa w-100 position-relative">
         <MapContainer center={coordenadas} zoom={13}>
           <TileLayer
-            url="https://api.mapbox.com/styles/v1/michaelsp11/ckrcg58em1hjp17o54dqcjt5i/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibWljaGFlbHNwMTEiLCJhIjoiY2twaTdxdmgxMDY0dTJ3cXl4ZHRtM3prbiJ9.Mac0yVJ1kc1mI8l9ToexvQ"
+            url={`https://api.mapbox.com/styles/v1/${process.env.REACT_APP_MAPBOX_USERNAME}/ckrcg58em1hjp17o54dqcjt5i/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}`}
             attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
           />
           <Marker position={coordenadas}>
