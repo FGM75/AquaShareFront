@@ -1,4 +1,4 @@
-# AquaShare
+# AquaTravel
 Este proyecto React implementa un mapa, mostrando sitios relacionados con el agua. Los usuarios pueden registrarse para acceder para registrar sus propios sitios.
 ## Funcionalidades
 - Mapa: Los usuarios pueden explorar el mapa que muestra diferentes puntos relacionados con el agua.
