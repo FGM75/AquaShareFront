@@ -12,7 +12,7 @@ Este proyecto React implementa un mapa, mostrando sitios relacionados con el agu
 - Bootstrap
 - Mongo
 
-#Diagrama de Uso
+# Diagrama de Uso
 
 ```mermaid
 graph TD
